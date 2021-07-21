@@ -7,6 +7,9 @@ print("When you are ready to run your code, enter the number of the task below."
 
 choice = input("\nEnter the number of the task you would like to run: ")
 
-currentLesson = db["currentLesson"]
-path = f"./lesson{currentLesson}/task{choice}.py"
-exec(open(path).read())
+if choice in [String(n) for n in range(1,6)]:
+    currentLesson = db["currentLesson"]
+    path = f"./lesson{currentLesson}/task{choice}.py"
+    exec(open(path).read())
+else:
+    print("ERROR: Invalid task number. Please try again.")
