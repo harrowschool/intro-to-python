@@ -1,3 +1,2 @@
 run="python main.py"
 language="python3"
-onBoot="This is the Harrow School Intro to Python Course. Please wait while we get things set up for you..."

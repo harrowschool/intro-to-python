@@ -4,4 +4,6 @@ print("👈 On the sidebar on the left you will see the tasks under lesson 1. In
 
 choice = input("Enter the number of the task you would like to run: ")
 
-exec(open(f"task{choice}.py").read())
+currentLesson = db["currentLesson"]
+path = f"./lesson{currentLesson}/task{choice}.py"
+exec(open(path).read())
