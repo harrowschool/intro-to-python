@@ -1,3 +1,2 @@
 run="python main.py"
 language="python3"
-onBoot="chmod +x setup.sh && ./setup.sh"
