@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import os
 from replit import db
 from art import *
