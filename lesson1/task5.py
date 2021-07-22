@@ -1,5 +1,5 @@
 '''
-Task 5 - Homework - The Chat Bot Challenge
+Task 5 - Prep - The Chat Bot Challenge
 
 Lots of websites use chatbots to interact with their customers.  These chatbots are often very sophisticated and use AI to learn and adapt to the user.  Our chat bot is going to be a bit simpler.
 
