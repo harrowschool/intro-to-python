@@ -2,7 +2,6 @@ import os
 from replit import db
 from art import *
 
-os.system("./setup.sh")
 os.system("clear")
 
 if "currentLesson" not in db:
