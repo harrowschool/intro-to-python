@@ -1,2 +1,2 @@
-run="chmod +x setup.sh && ./setup.sh && python3 main.py"
+run="python3 main.py"
 language="python3"
