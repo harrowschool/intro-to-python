@@ -1,6 +1,7 @@
 import os
 from replit import db
 from art import *
+import cursesmenu
 
 os.system("clear")
 
