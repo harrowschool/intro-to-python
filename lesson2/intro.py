@@ -1,4 +1,4 @@
-tprint("Lesson  2")
+tprint("Lesson 2")
 print("Welcome to Lesson 2. In this lesson you will learn about doing maths with variables.")
 print("\n👈 On the sidebar on the left you will see folder called lesson 2.")
 print("In this folder you will find one file for each task.")
