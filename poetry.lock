@@ -1,0 +1,32 @@
+[[package]]
+name = "art"
+version = "5.2"
+description = "ASCII Art Library For Python"
+category = "main"
+optional = false
+python-versions = ">=2.7"
+
+[package.extras]
+dev = ["coverage (>=4.1)", "codecov (>=2.0.15)", "vulture (>=1.0)", "bandit (>=1.5.1)", "pydocstyle (>=3.0.0)"]
+
+[[package]]
+name = "curses-menu"
+version = "0.5.0"
+description = "A simple console menu system using curses"
+category = "main"
+optional = false
+python-versions = "*"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.8"
+content-hash = "26d31c8c9b723ec89ef0425bbef38a76e18fb5d16df1acd71e80af44ba147d9e"
+
+[metadata.files]
+art = [
+    {file = "art-5.2-py2.py3-none-any.whl", hash = "sha256:0d289b585a1d36720318383643bde71dc4e10416759486ec800a472091bef1a7"},
+    {file = "art-5.2.tar.gz", hash = "sha256:c069b08cd11dec860dab1ce2cc2550ffcf1b76968ff322b4303241e030696ba7"},
+]
+curses-menu = [
+    {file = "curses-menu-0.5.0.zip", hash = "sha256:29c45e2f16283833e2940fac0fd64e948f2ff603d3e11f510c5bd2b946cd8981"},
+]
