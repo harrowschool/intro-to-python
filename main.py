@@ -1,8 +1,12 @@
 import os
-#from replit import db
 from art import *
 from cursesmenu import *
 from cursesmenu.items import *
+
+runningOnReplit = os.environ["HOME"] == "/home/runner"
+
+if runningOnReplit:
+  from replit import db
 
 lessons = [
   {"name": "lesson1", 
@@ -31,12 +35,13 @@ lessons = [
   },
 ]
 
-#if "lessons" not in db:
-#  db["lessons"] = lessons
-#else:
-#  lessons = db["lessons"]
-
-db = {"firstRun": False}
+if runningOnReplit:
+  if "lessons" not in db:
+    db["lessons"] = lessons
+  else:
+    lessons = db["lessons"]
+else:
+  db = {"firstRun": False}
 
 os.system("clear")
 
@@ -89,16 +94,9 @@ def initMenu():
     def markLessonAsComplete(lesson):
       lesson["complete"] = True
       initMenu()
-    
-    #completeLesson = FunctionItem("Mark Lesson as Complete", markLessonAsComplete, [lesson])
-    #submenu.append_item(completeLesson)
   
   menu.show()
   
 initMenu()
   
-
-
-#path = f"./lesson{currentLesson}/intro.py"
-#exec(open(path).read())
 
