@@ -9,28 +9,22 @@ if runningOnReplit:
   from replit import db
 
 lessons = [
-  {"name": "lesson1", 
-  "complete": False,
+  {"name": "lesson1",
   "tasks": [{"name": f"task{i}", "complete": False} for i in range(1,6)]
   },
-  {"name": "lesson2", 
-  "complete": False,
+  {"name": "lesson2",
   "tasks": [{"name": f"task{i}", "complete": False} for i in range(1,6)]
   },
-  {"name": "lesson3", 
-  "complete": False,
+  {"name": "lesson3",
   "tasks": [{"name": f"task{i}", "complete": False} for i in range(1,6)]
   },
-  {"name": "lesson4", 
-  "complete": False,
+  {"name": "lesson4",
   "tasks": [{"name": f"task{i}", "complete": False} for i in range(1,4)]
   },
-  {"name": "lesson5", 
-  "complete": False,
+  {"name": "lesson5",
   "tasks": [{"name": f"task{i}", "complete": False} for i in range(1,6)]
   },
-  {"name": "lesson6", 
-  "complete": False,
+  {"name": "lesson6",
   "tasks": [{"name": f"task{i}", "complete": False} for i in range(1,5)]
   },
 ]
@@ -60,6 +54,11 @@ def checkmark(complete):
 def isLessonComplete(lesson):
   return all(task["complete"] for task in lesson["tasks"])
 
+def save():
+  global lessons
+  global db
+  db["lessons"] = lessons
+
 menu = CursesMenu()
   
 def initMenu():  
@@ -78,6 +77,7 @@ def initMenu():
       
       def markTaskAsComplete(task):
         task["complete"] = True
+        save()
         initMenu()
         
       completeTask = FunctionItem("Mark Task as Complete", markTaskAsComplete, [task])
@@ -90,10 +90,6 @@ def initMenu():
     
     submenuItem = SubmenuItem(lesson["name"] + checkmark(isLessonComplete(lesson)), submenu, menu)
     menu.append_item(submenuItem)
-    
-    def markLessonAsComplete(lesson):
-      lesson["complete"] = True
-      initMenu()
   
   menu.show()
   
